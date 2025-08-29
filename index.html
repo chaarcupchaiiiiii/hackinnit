@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chaarcupsoftea </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ chaarcupsoftea</h1>
+
+    <input type="file" id="audioUpload" accept="audio/*">
+    <div id="waveform"></div>
+    <div class="controls">
+      <button id="playPause">▶️ Play / Pause</button>
+      <button id="trimExport">✂️ Export Trimmed Clip</button>
+    </div>
+    
+    <audio id="exportedAudio" controls style="display:none;"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
