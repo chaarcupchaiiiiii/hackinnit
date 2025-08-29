@@ -1,1 +1,68 @@
+//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whisper Mock + WaveSurfer Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js/dist/plugins/regions.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <h1>Whisper Mock + WaveSurfer Highlight</h1>
 
+    <input type="file" id="fileInput" accept="audio/*" />
+    <button id="btnDetect">Detect & Highlight</button>
+
+    <div id="waveform"></div>
+
+    <h3>Flagged Regions</h3>
+    <pre id="flaggedOutput">[]</pre>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+
+//styles.css
+body {
+  font-family: sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+}
+
+#waveform {
+  margin-top: 20px;
+  height: 150px;
+  background: #161b22;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+button {
+  margin: 10px 0;
+  padding: 8px 14px;
+  background: #238636;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2ea043;
+}
+
+pre {
+  background: #161b22;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
